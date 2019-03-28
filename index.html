@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>youcai</title>
+    <style>
+    	*{
+    		margin: 0;
+    		padding: 0;
+    		box-sizing: border-box;
+    	}
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
+<!--<script src="src/assets/js/rem.js"></script>-->
+<script>
+(function(doc){
+		//通过设备宽度计算html 字体大小
+		function changeSize(){
+			//设备款/320px*1rem所代表的px值
+			var size=doc.documentElement.clientWidth/320*20;
+			doc.querySelector('html').style.fontSize=size+'px';
+		}
+		//用户缩放浏览器窗口大小时
+		window.onresize=changeSize;
+		changeSize();
+	})(document);
+</script>
